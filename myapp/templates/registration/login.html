@@ -1,0 +1,16 @@
+{% extends "myapp/base.html" %}
+
+{% block content %}
+
+<div class="page-center container">
+    <h1 class="my-stle">LOGIN</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-primary" type="submit">Submit</button>
+        <br>
+        <a href="/register">Not registered,yet?Sign Up</a>
+        </form>
+</div>
+
+{% endblock %}
