@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse,HttpResponseRedirect
 from .models import Entry
 from .forms import EntryForm
@@ -32,5 +32,13 @@ def add(request):
         form = EntryForm()
 
     return render(request,'myapp/form.html',{'form':form})
+
+
+def delete(request,pk):
+
+    if request.method == 'DELETE':
+        entry = get_object_or_404(Entry,pk=pk)
+        entry.delete()
+    return HttpResponseRedirect('/')
 
    
