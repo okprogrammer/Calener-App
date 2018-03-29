@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL = '/calender'
 
+LOGIN_URL='/login'
+
 
 # Application definition
 
