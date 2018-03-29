@@ -12,3 +12,7 @@ class Entry(models.Model):
 
     def __str__(self):
         return self.name
+
+
+    def short_description(self):
+        return self.description[:15]
