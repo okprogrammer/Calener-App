@@ -14,7 +14,8 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
+TEMPLATE_DIR = os.path.join(BASE_DIR,'myapp/templates')
+STATIC_DIR = os.path.join(BASE_DIR,'myapp/static')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -26,6 +27,8 @@ SECRET_KEY = '9b4&=+%ofk8en28ym(94o4+ejfa&_7kbm5&p8ov1qh-tclutm7'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+LOGIN_REDIRECT_URL = '/calender'
 
 
 # Application definition
